@@ -65,7 +65,7 @@ func (app *appEnv) run() error {
 		if err := app.fetchAndSave(result.Img, result.Filename()); err != nil {
 			return err
 		}
-		fmt.Fprintf(os.Stderr, "Saved: %q\n", result.Filename())
+		fmt.Fprintf(os.Stdout, "Saved: %q\n", result.Filename())
 	}
 	if app.outputJSON {
 		return printJSON(&result)
